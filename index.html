@@ -1,33 +1,168 @@
-<!DOCTYPE html>
-
+<!-- <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Tamil Movie Player</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://vjs.zencdn.net/7.21.1/video-js.css" rel="stylesheet" />
-    <script defer src="https://vjs.zencdn.net/7.21.1/video.min.js"></script>
-  </head>
 
-  <body>
-    <h1>Video Player</h1>
+<head>
+  <meta charset=utf-8 />
+  <title>Tamil Movie Player</title>
 
-    <video
-      id="my-video"
-      class="video-js"
-      controls
-      preload="auto"
-      width="640"
-      height="264"
-      data-setup="{}"
-    >
-      <source src="D2786.mp4.m3u8" type="application/x-mpegURL">>
-    </video>
-    <!-- <script src="" async defer></script> -->
-  </body>
+
+  <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+  <script src="https://unpkg.com/video.js/dist/video.js"></script>
+  <script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
+
+</head>
+
+<body>
+  <h1>Tamil Movie Player</h1>
+  <video id="my_video_1" class="video-js vjs-fluid vjs-default-skin" controls preload="auto" data-setup='{}'>
+    <source src="https://cdn2.einthusan.io/etv/content/D0055.mp4.m3u8?e=1684746637&md5=FrlOJc20h90Un-Dgj7Mqog"
+      type="application/x-mpegURL">
+  </video>
+
+  <script>
+    var player = videojs('my_video_1');
+    player.play();
+  </script>
+
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Player</title>
+  <meta charset="utf-8">
+  <meta name="description" content="movie player">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Movie player with link input">
+  <meta name="author" content="Kailash Muthu">
+  <meta name="organization" content="Kailash Muthu">
+  <meta name="application-name" content="Movie Player">
+  <meta name="keywords"
+    content="m3u8, video, player, movie, tamil, movieplayer, videoplayer">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"><link rel="stylesheet" href="./style.css">
+
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  
+  <main class="flexy__item flexy--items-center flexy--justify-center flexy--column">
+    <section class="section flexy__item flexy--column flexy--items-center space--big">
+      <header class="header accessible-hide">
+        <h2>HTML5 Video Player</h2>
+      </header>
+      <article class="section__article flexy__item flexy--column flexy--items-center">
+        <header class="header accessible-hide">
+          <h3>A skinnable video player.</h3>
+        </header>
+        <div class="video flexy__item">
+
+          <!-- <video class="video__player" id="video__player" autoplay="autoplay" preload="metadata">
+          <source src="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_2160p_60fps_normal.mp4" type="video/mp4"/>
+        </video> -->
+
+          <!-- <video class="video__player" id="video__player" controls autoplay="autoplay" preload="metadata">
+            <source src="https://cdn2.einthusan.io/etv/content/D2526.mp4.m3u8?e=1684846713&md5=OgfWtlmCJJV7HkqS-q0xfw"
+              type="application/x-mpegURL">
+          </video> -->
+
+          <video class="video__player" id="video__player" controls autoplay="autoplay" preload="metadata">
+            <source id="videoSource" type="application/x-mpegURL">
+          </video>
+
+          
+        </div>
+      </article>
+    </section>
+    <header class="header">
+      <h1>
+        
+        <div class="wrap">
+          <div class="search">
+            <input type="text" id="videoSrcInput" class="searchTerm" placeholder="Enter video source URL">
+             <!-- <input type="text" class="searchTerm" placeholder="Enter Movie Name"> -->
+             <button id="submitButton" type="submit" class="searchButton">
+               <i class="fa fa-search"></i>
+            </button>
+          </div>
+       </div>
+
+        </h1>
+    </header>
+  </main>
+  <svg class="svg-bg" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <circle id="a" cx="1468" cy="133" r="35"></circle>
+      <mask id="h" x="0" y="0" width="70" height="70" fill="#fff">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#a"></use>
+      </mask>
+      <circle id="b" cx="236.5" cy="732.5" r="23.5"></circle>
+      <mask id="i" x="0" y="0" width="47" height="47" fill="#fff">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#b"></use>
+      </mask>
+      <circle id="c" cx="1120.5" cy="945.5" r="28.5"></circle>
+      <mask id="j" x="0" y="0" width="57" height="57" fill="#fff">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#c"></use>
+      </mask>
+      <path id="d" d="M1193.375 302.875l44.6 77.25h-89.2z"></path>
+      <mask id="k" x="0" y="0" width="89.201" height="77.25" fill="#fff">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#d"></use>
+      </mask>
+      <path id="e" d="M1610.8 513.3l34.14 59.128h-68.278z"></path>
+      <mask id="l" x="0" y="0" width="68.277" height="59.13" fill="#fff">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#e"></use>
+      </mask>
+      <path id="f" d="M51.045 967.864l38.314 66.362H12.73z"></path>
+      <mask id="m" x="0" y="0" width="76.629" height="66.362" fill="#fff">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#f"></use>
+      </mask>
+      <path id="g" d="M46.045 311.097l26.5 45.897H19.546z"></path>
+      <mask id="n" x="0" y="0" width="52.997" height="45.897" fill="#fff">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#g"></use>
+      </mask>
+    </defs>
+    <g style="mix-blend-mode:overlay" fill="none" fill-rule="evenodd" opacity=".35" stroke="#FFF">
+      <use class="svg-bg_element" mask="url(#h)" stroke-width="6" xmlns:xlink="http://www.w3.org/1999/xlink"
+        xlink:href="#a"></use>
+      <use class="svg-bg_element" mask="url(#i)" stroke-width="6" xmlns:xlink="http://www.w3.org/1999/xlink"
+        xlink:href="#b"></use>
+      <use class="svg-bg_element opacity-anim" mask="url(#j)" stroke-width="6"
+        xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#c"></use>
+      <path class="stroke-anim" d="M657.5 848.5l46 46" stroke-width="3" stroke-linecap="square"></path>
+      <path d="M1360.5 1206.5l89-89M761.5 42.5l42-42" stroke-width="3" stroke-linecap="square"></path>
+      <use class="svg-bg_element" mask="url(#k)" stroke-width="6" transform="rotate(90 1193.375 341.5)"
+        xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#d"></use>
+      <use class="svg-bg_element" mask="url(#l)" stroke-width="6" transform="rotate(45 1610.8 542.863)"
+        xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#e"></use>
+      <use class="svg-bg_element rotate-anim" mask="url(#m)" stroke-width="6" transform="rotate(45 51.045 1001.045)"
+        xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#f"></use>
+      <use class="svg-bg_element" mask="url(#n)" stroke-width="6" transform="rotate(20 46.045 334.045)"
+        xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#g"></use>
+    </g>
+  </svg>
+  <!-- partial -->
+  <script src="./script.js"></script>
+
+  <script>
+    var inputElement = document.getElementById('videoSrcInput');
+    var submitButton = document.getElementById('submitButton');
+    var videoSourceElement = document.getElementById('videoSource');
+
+    // Add an event listener to update the video source when the submit button is clicked
+    submitButton.addEventListener('click', function() {
+      var videoSrc = inputElement.value;
+      videoSourceElement.src = videoSrc;
+      document.getElementById('video__player').load();
+    });
+  </script>
+
+</body>
+
 </html>
-
-
-<!-- https://cdn1.einthusan.io/etv/content/ -->
